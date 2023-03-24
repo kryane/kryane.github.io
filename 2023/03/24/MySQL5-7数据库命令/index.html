@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux命令, Hexo">
+    <meta name="keywords" content="MySQL5.7数据库命令, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux命令 | Hexo</title>
+    <title>MySQL5.7数据库命令 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux命令</h1>
+                    <h1 class="description center-align post-title">MySQL5.7数据库命令</h1>
                 </div>
             </div>
         </div>
@@ -464,115 +464,92 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h3><h4 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h4><p>查看当前文件夹的所有文件</p>
-<h4 id="history"><a href="#history" class="headerlink" title="history"></a>history</h4><p>查看之前输入了哪些命令</p>
-<p>！+输入对应的编号	就可以执行当时的命令</p>
-<h4 id="Linux命令结构"><a href="#Linux命令结构" class="headerlink" title="Linux命令结构"></a>Linux命令结构</h4><p>命令体：	ls</p>
-<p>选项： -l(详细信息)</p>
-<p>路径： snap</p>
-<h4 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h4><p>查看当前路径</p>
-<h4 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h4><p>查看当前的root用户（我是谁）</p>
-<h4 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h4><p>前面没有 &#x2F; 代表的是相对路径</p>
-<p>前面有 &#x2F; 代表的是绝对路径</p>
-<p>cd .. 返回上一级目录</p>
-<p>cd ..&#x2F;.. 返回上上一级目录</p>
-<p>cd &#x2F; 直接返回根目录</p>
-<p>cd ~ 回到当前用户目录</p>
-<p>cd - 返回上一次所在的目录</p>
-<h4 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h4><p>ctrl + c	取消当前操作</p>
-<p>ctrl + L	清屏	或者clear</p>
-<p>ctrl + d	退出当前用户</p>
-<p>ctrl + r	查看历史命令</p>
-<p>[TAB]:</p>
-<p>​		1、命令补全</p>
-<p>​		2、路径补全</p>
-<p>ctrl + a	把光标移动到行首</p>
-<p>ctrl + e	把光标移动到行尾</p>
-<p>ctrl + u	把光标到行首的内容删除</p>
-<p>ctrl + y	粘贴</p>
-<p>ctrl + k	把光标到行尾的内容删除</p>
-<p>ctrl + s	锁屏</p>
-<p>ctrl + q	解屏</p>
-<p>ctrl + &gt;	向右移动一个单词</p>
-<p>ctrl + &lt;	向左移动一个单词</p>
-<p>poweroff	关机（远程关机的话，前面要加一个sudo，然后再输入一次密码）</p>
-<p>reboot	重启</p>
-<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><h4 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h4><h5 id="相对路径是从当前开始创建的"><a href="#相对路径是从当前开始创建的" class="headerlink" title="相对路径是从当前开始创建的"></a>相对路径是从当前开始创建的</h5><p>mkdir 文件夹名</p>
-<p>mkdir -p b&#x2F;c&#x2F;d 多级目录</p>
-<h5 id="批量创建目录"><a href="#批量创建目录" class="headerlink" title="批量创建目录"></a>批量创建目录</h5><p>mkdir a{1..10}	或者	mkdir dir{a..f}</p>
-<h4 id="安装tree"><a href="#安装tree" class="headerlink" title="安装tree"></a>安装tree</h4><p>sudo apt install tree</p>
-<p>tree	查看当前</p>
-<p>tree -L 1&#x2F;	查看当前目录下的一层</p>
-<p>tree -L 2&#x2F;	查看当前目录下的二层</p>
-<h5 id="指定查看目录"><a href="#指定查看目录" class="headerlink" title="指定查看目录"></a>指定查看目录</h5><p>ps：这里的b代指文件</p>
-<p>相对路径</p>
-<p>​		tree b</p>
-<p>绝对路径</p>
-<p>​		tree &#x2F;home&#x2F;b</p>
-<h5 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h5><p>*通配符</p>
-<p>ls -ld dir*	查看所有dir同名的文件</p>
-<h5 id="删除文件（危险）"><a href="#删除文件（危险）" class="headerlink" title="删除文件（危险）"></a>删除文件（危险）</h5><p>rm 文件名	删除文件</p>
-<p>rmdir 文件夹名	删除文件夹		（无法删除多级目录）</p>
-<p>rm -rf 目录	删除多级目录</p>
-<h5 id="修改目录"><a href="#修改目录" class="headerlink" title="修改目录"></a>修改目录</h5><p>复制</p>
-<p>​		cp 源文件 目标文件	到文件夹		复制文件（可以重新命名）</p>
-<p>​		案例：</p>
-<p>​				cp aaa.py py_case&#x2F;eee.py</p>
-<p>​				aaa.py		源文件</p>
-<p>​				py_case		目标文件夹</p>
-<p>​				eee.py		重新命名的文件</p>
-<p>​		</p>
-<p>​		如果是文件夹要加	cp -r 源文件夹 目标文件夹		复制文件（可以重命名）</p>
-<p>剪切</p>
-<p>​		mv 源文件&#x2F;源文件夹 目标文件&#x2F;目标文件夹		剪切文件（可以重新命名）</p>
-<h4 id="普通文件"><a href="#普通文件" class="headerlink" title="普通文件"></a>普通文件</h4><p>创建文件</p>
-<p>​		touch 文件名</p>
-<p>查看文件</p>
-<p>​		cat 文件名</p>
-<p>查看文件属性</p>
-<p>​		ls -l 文件名</p>
-<p>​		ls -ld 文件夹名</p>
-<p>搜索文件</p>
-<p>​		find -name ‘文件名’</p>
-<p>​		通配符*</p>
-<p>​				find -name ‘*加一部分文件的前缀或者后缀’</p>
-<h4 id="软硬链接（数据发生变化会同步）"><a href="#软硬链接（数据发生变化会同步）" class="headerlink" title="软硬链接（数据发生变化会同步）"></a>软硬链接（数据发生变化会同步）</h4><p>软连接	快捷方式</p>
-<p>​		ln -s 源文件 软链接文件</p>
-<p>影链接	相当于复制	备份</p>
-<p>​		ln 源文件 硬链接文件</p>
-<h3 id="vim操作"><a href="#vim操作" class="headerlink" title="vim操作"></a>vim操作</h3><h4 id="修改文件内容（重点）"><a href="#修改文件内容（重点）" class="headerlink" title="修改文件内容（重点）"></a>修改文件内容（重点）</h4><p>vim模式：命令模式（光标，复制），插入模式（编辑），末行模式（保存退出）</p>
-<p>进入 vim 文件名</p>
-<p>切换模式	esc键</p>
-<p>​		：选择末行模式（shift + ：）</p>
-<p>​		w 保存</p>
-<p>​		q 退出</p>
-<p>进入插入模式	切换模式按esc键</p>
-<p>​		i 光标的前一个位置插入</p>
-<p>​		a 光标的后一个位置插入</p>
-<p>​		I （可以按shift + i）跳到行首</p>
-<p>​		A （可以按shift + a）跳到行尾</p>
-<p>​		o 当前光标所在行下方新增一行</p>
-<p>​		O 当前光标所在行上方新增一行</p>
-<p>命令模式	</p>
-<p>​		gg 跳到第一行行首</p>
-<p>​		G 跳到最后一行行首</p>
-<p>​		^ 跳到非空格行首</p>
-<p>​		$ 跳到本行行首</p>
-<p>操作文件</p>
-<p>​		yy 复制整行内容</p>
-<p>​		p 粘贴</p>
-<p>​		dd 删除当前行</p>
-<p>运行python代码（vim模式下）</p>
-<p>​		1、f5	运行代码	回车重新进来</p>
-<p>​		2、也可以退出保存文件vim		python 文件名.py	运行代码</p>
-<h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><p>ps 	是操作系统的进程命令</p>
-<p>查看所有的进程</p>
-<p>​		ps -ef</p>
-<p>选择查看进程</p>
-<p>​		ps -ef |gref 想要的进程</p>
-<p>关闭进程</p>
-<p>​		kill 进程的id</p>
-<p>​		pkill 进程名字</p>
+                <h3 id="MySQL5-7数据库命令"><a href="#MySQL5-7数据库命令" class="headerlink" title="MySQL5.7数据库命令"></a>MySQL5.7数据库命令</h3><h4 id="连接虚拟机"><a href="#连接虚拟机" class="headerlink" title="连接虚拟机"></a>连接虚拟机</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh poppies@192.168.201.130</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查看所有数据库"><a href="#查看所有数据库" class="headerlink" title="查看所有数据库"></a>查看所有数据库</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查看指定表的创建语句"><a href="#查看指定表的创建语句" class="headerlink" title="查看指定表的创建语句"></a>查看指定表的创建语句</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 先use到指定的表</span><br><span class="line">use 表名;</span><br><span class="line"></span><br><span class="line">show create table 表名;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="创建一个数据库"><a href="#创建一个数据库" class="headerlink" title="创建一个数据库"></a>创建一个数据库</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database python_test;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="展示当前使用的是哪个数据库"><a href="#展示当前使用的是哪个数据库" class="headerlink" title="展示当前使用的是哪个数据库"></a>展示当前使用的是哪个数据库</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select database();</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="在当前数据库创建一个学生表"><a href="#在当前数据库创建一个学生表" class="headerlink" title="在当前数据库创建一个学生表"></a>在当前数据库创建一个学生表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table students(</span><br><span class="line">    -&gt; id int unsigned primary key auto_increment not null,</span><br><span class="line">    -&gt; age tinyint unsigned default 0,</span><br><span class="line">    -&gt; height decimal(5, 2),</span><br><span class="line">    -&gt; gender enum(&#x27;男&#x27;,&#x27;女&#x27;),</span><br><span class="line">    -&gt; cls_id int unsigned default 0,</span><br><span class="line">    -&gt; is_delect bit default 0</span><br><span class="line">    -&gt; );</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">unsigned表示不是复数</span><br><span class="line">decimal表示浮点数，如decimal(5,2)表示共存5位数，小数占2位</span><br><span class="line">char表示固定长度的字符串，如char(3)，如果填充&#x27;ab&#x27;时会补一个空格为&#x27;ab &#x27;</span><br><span class="line">varchar表示可变长度的字符串，如varchar(3)，填充&#x27;ab&#x27;时就会存储&#x27;ab&#x27;</span><br><span class="line">字符串text表示存储大文本，当字符大于4000时推荐使用</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">主键primary key：物理上存储的顺序</span><br><span class="line">非空not null：此字段不允许填写空值</span><br><span class="line">惟一unique：此字段的值不允许重复</span><br><span class="line">默认default：当不填写此值时会使用默认值，如果填写时以填写为准</span><br><span class="line">外键foreign key：对关系字段进行约束，当为关系字段填写值时，会到关联的表中查询此值是否存在，如果存在则填写成功，如果不存在则填写失败并抛出异常</span><br><span class="line"></span><br><span class="line">说明：虽然外键约束可以保证数据的有效性，但是在进行数据的crud（增加、修改、删除、查询）时，都会降低数据库的性能，所以不推荐使用，那么数据的有效性怎么保证呢？答：可以在逻辑层进行控制</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查看表的内容"><a href="#查看表的内容" class="headerlink" title="查看表的内容"></a>查看表的内容</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc students;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="插入表数据"><a href="#插入表数据" class="headerlink" title="插入表数据"></a>插入表数据</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名 values</span><br><span class="line"></span><br><span class="line">insert into students values</span><br><span class="line">(0,&#x27;小明&#x27;,18,180.00,2,1,0),</span><br><span class="line">(0,&#x27;小月月&#x27;,18,180.00,2,2,1),</span><br><span class="line">(0,&#x27;彭于晏&#x27;,29,185.00,1,1,0),</span><br><span class="line">(0,&#x27;刘德华&#x27;,59,175.00,1,2,1),</span><br><span class="line">(0,&#x27;黄蓉&#x27;,38,160.00,2,1,0),</span><br><span class="line">(0,&#x27;凤姐&#x27;,28,150.00,4,2,1),</span><br><span class="line">(0,&#x27;王祖贤&#x27;,18,172.00,2,1,1),</span><br><span class="line">(0,&#x27;周杰伦&#x27;,36,NULL,1,1,0),</span><br><span class="line">(0,&#x27;程坤&#x27;,27,181.00,1,2,0),</span><br><span class="line">(0,&#x27;刘亦菲&#x27;,25,166.00,2,2,0),</span><br><span class="line">(0,&#x27;金星&#x27;,33,162.00,3,3,1),</span><br><span class="line">(0,&#x27;静香&#x27;,12,180.00,2,4,0),</span><br><span class="line">(0,&#x27;郭靖&#x27;,12,170.00,1,4,0),</span><br><span class="line">(0,&#x27;周杰&#x27;,34,176.00,2,5,0);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查看表的字段"><a href="#查看表的字段" class="headerlink" title="查看表的字段"></a>查看表的字段</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select 字段名 from 表名;</span><br><span class="line"></span><br><span class="line">select name,age from students;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="中文替换字段"><a href="#中文替换字段" class="headerlink" title="中文替换字段"></a>中文替换字段</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select name as 姓名, age as 年龄 from students;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查询指定的字段内容"><a href="#查询指定的字段内容" class="headerlink" title="查询指定的字段内容"></a>查询指定的字段内容</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select students.name, students.age from students;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="去重查询"><a href="#去重查询" class="headerlink" title="去重查询"></a>去重查询</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select distinct gender from students;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 查询大于18岁的信息</span><br><span class="line">select * from students where age &gt; 18;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查询不等于18岁的信息"><a href="#查询不等于18岁的信息" class="headerlink" title="查询不等于18岁的信息"></a>查询不等于18岁的信息</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from wtudents where age != 18;</span><br><span class="line">select * from students where age &lt;&gt; 18;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 从18到28岁的所有学生信息</span><br><span class="line">select * from students where age&gt;18 and age&lt;28;</span><br><span class="line"></span><br><span class="line">-- 查询大于18岁的女性</span><br><span class="line">select * from students where age &gt; 18 and gender=&#x27;女&#x27;;</span><br><span class="line"></span><br><span class="line">-- 查询18岁以上或者身高超过180的同学</span><br><span class="line">select * from students where age &gt; 18 or height&gt;180;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="取反"><a href="#取反" class="headerlink" title="取反"></a>取反</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-- 不在18岁以上的女性</span><br><span class="line">select * from students where (not age&gt;18) and gender=2;</span><br><span class="line"></span><br><span class="line">-- 年龄不是小于或者等于18，并且是女性</span><br><span class="line">select * from students where (not age &lt;= 18) and gender=2;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-- like</span><br><span class="line">-- % 替换一个或者多个</span><br><span class="line">-- _替换一个</span><br><span class="line">-- 查询以小开始的名字</span><br><span class="line">select name from students where name like &#x27;小%&#x27;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- 查询姓名中有’小‘的所有名字</span><br><span class="line">select name from students where name like &#x27;%小%&#x27;;</span><br><span class="line"></span><br><span class="line">-- 查询有两个字的名字</span><br><span class="line">select name from students where name like &#x27;__&#x27;;</span><br><span class="line"></span><br><span class="line">-- 查询名字中至少有两个字的名字</span><br><span class="line">select name from students where name like &#x27;__%&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="正则查询"><a href="#正则查询" class="headerlink" title="正则查询"></a>正则查询</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- rlike</span><br><span class="line">-- 查询以周开始的姓名</span><br><span class="line">select name from students where name rlike &#x27;^周.*&#x27;;</span><br><span class="line"></span><br><span class="line">-- 查询以周开头，以伦结尾的名字</span><br><span class="line">select name from students where name rlike &#x27;^周.*伦$&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>^:表示以什么开头</p>
+<p>$:表示以什么结尾</p>
+<h4 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-- in</span><br><span class="line">select name, age from students where age=18 or age=34;</span><br><span class="line">select name, age from students where age in(18, 34);</span><br><span class="line"></span><br><span class="line">-- 年龄不是18和34岁的信息</span><br><span class="line">select name, age from students where age not in(18, 34);</span><br><span class="line"></span><br><span class="line">-- 查询年龄不在18和34之间的信息</span><br><span class="line">select name, age from students where age not between 18 and 34;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>between包含两边的数</p>
+<p>not between是一个连词</p>
+<h4 id="空判断"><a href="#空判断" class="headerlink" title="空判断"></a>空判断</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 查询身高为空的信息</span><br><span class="line">select * from students where height is null;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">-- 查询年龄在18到34岁之间的男性</span><br><span class="line">select * from students where (age between 18 and 34) and gender=1;</span><br><span class="line"></span><br><span class="line">-- 查询年龄在18到34岁之间的男性，按照年龄从小到大排序</span><br><span class="line">select * from students where (age between 18 and 34) and gender=1 order by age;</span><br><span class="line">select * from students where (age between 18 and 34) and gender=1 order by age asc;</span><br><span class="line"></span><br><span class="line">-- 查询年龄在18到34岁之间的男性，按照年龄从大到小排序</span><br><span class="line">select * from students where (age between 18 and 34) and gender=1 order by age desc;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- 查询年龄在18到34岁之间的女性，身高从高到矮排序</span><br><span class="line">select * from students where (age between 18 and 34) and gender=2 order by height desc;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -599,7 +576,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kryane.github.io/2023/03/24/Linux%E5%91%BD%E4%BB%A4/">https://kryane.github.io/2023/03/24/Linux%E5%91%BD%E4%BB%A4/</a>
+                    <a href="https://kryane.github.io/2023/03/24/MySQL5-7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4/">https://kryane.github.io/2023/03/24/MySQL5-7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -804,9 +781,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/03/24/MySQL5-7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
@@ -824,9 +802,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -835,6 +813,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -845,13 +824,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/24/vue%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E5%91%BD%E4%BB%A4/">
+                <a href="/2023/03/24/Linux%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="vue创建项目命令">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Linux命令">
                         
-                        <span class="card-title">vue创建项目命令</span>
+                        <span class="card-title">Linux命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
