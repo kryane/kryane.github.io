@@ -96,7 +96,7 @@ h1.post-title {
 }
 
 #aside-content>.card-widget.card-info>#card-info-btn {
-	background-color: var(--theme-color);
+	/* background-color: var(--theme-color); */
 	border-radius: 8px
 }
 
